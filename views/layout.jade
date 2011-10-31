@@ -2,17 +2,10 @@
 html
 	head
 		title= title
-		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='/stylesheets/frontpage.css')
 		script(src='/socket.io/socket.io.js')
 		script(src='https://ajax.googleapis.com/ajax/libs/mootools/1.4.1/mootools-yui-compressed.js')
-		script(type='text/javascript')
-			var socket = io.connect('http://localhost');
-			socket.on('news', function (data) {
-				console.log(data);
-				window.addEvent('domready',function(){
-					$('text').innerHTML += data.html;
-				});
-				socket.emit('my other event', { my: 'data' }); 
-			});
+		script(src='/js/frontpage.js')
+			
 			
 	body!= body

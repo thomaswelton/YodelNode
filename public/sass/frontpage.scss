@@ -1,0 +1,125 @@
+@import "partials/base.scss";
+
+$red: #ec2327;
+
+html{
+	height:100%;
+	margin:0;
+	background:white;
+	color:#333;
+	font-family: Helvetica, Arial, sans-serif;
+}
+body{
+	@include container;
+	height: 100%;
+	width:100%;
+	overflow:visible;
+}
+
+.cross{
+	color:#ffffff;
+	font-size:100px;
+	line-height:65px;
+	text-align:right;
+}
+
+h1,h2{
+	color:#ffffff;
+}
+
+.highlight{
+	color:$red;
+	font-size:40px;
+	font-weight:800;
+	margin-bottom:10px;
+	display:block;
+}
+
+#yodelWrapper{
+	@include column-base(omega);
+	float:none;
+	background:image-url('bg.jpg');
+	width:image-width('bg.jpg') - (2 * 16px);
+	height:image-height('bg.jpg') - (2 * 7px);
+	margin:auto;
+	position:absolute;
+	left:50%;
+	margin-left: -1 * floor(image-width('bg.jpg')/2);
+	top:50%;
+	margin-top: -1 * floor(image-height('bg.jpg')/2);
+	padding:7px 16px;
+	
+	border: 1px solid #CCC;
+	@include box-shadow(rgba(0,0,0,0.4) 0 0 25px 5px);
+	
+	#flag{
+		background:image-url('flag.gif');
+		width:image-width('flag.gif');
+		height:image-height('flag.gif');
+		position: absolute;
+		left: 666px;
+		top: 25px;
+	}
+	
+	#header{
+		background-color:$red;
+		width:98px;
+		height:98px;
+		padding:10px;
+		color:#ffffff;	
+		position:relative;
+		
+		.cross{
+			position:absolute;
+			bottom:10px; right:10px;
+		}
+	}
+	
+	h1,h2{
+		font-size:12px;
+	}
+	
+	p.description{
+		width:380px;
+		color:#ffffff;
+		padding:10px 0;
+		font-size:12px;
+		line-height:20px;
+	}
+	
+	#hiker{
+		position:absolute;
+		bottom:0;
+		left:0;
+		background:image-url('hiker.png');
+		width:image-width('hiker.png');
+		height:image-height('hiker.png');
+		z-index:10;
+		
+		&.left{
+			@include scaleX(-1);
+		}
+	}
+
+}
+
+#markerContainer{
+	position:absolute;
+	bottom:0; left:0;
+	font-size:25px;
+	list-style:disc;
+	list-style-position:inside;
+	
+	.marker{
+		position:absolute;
+		left:0; bottom:0;
+		width:8px;
+		height:9px;
+		line-height:7px;
+		color:red;
+		
+		&.active{
+			color:white;
+		}
+	}
+}

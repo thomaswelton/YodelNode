@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/clkclk/!svn/ver/9791/source/trunk/templates/clkclk/extensions/magick/magick/functions
+END
+operations.rb
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/repos/clkclk/!svn/ver/9791/source/trunk/templates/clkclk/extensions/magick/magick/functions/operations.rb
+END
+types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/repos/clkclk/!svn/ver/9791/source/trunk/templates/clkclk/extensions/magick/magick/functions/types.rb
+END
+sprites.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/clkclk/!svn/ver/9791/source/trunk/templates/clkclk/extensions/magick/magick/functions/sprites.rb
+END
+canvas.rb
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/repos/clkclk/!svn/ver/9791/source/trunk/templates/clkclk/extensions/magick/magick/functions/canvas.rb
+END
+drawing.rb
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/repos/clkclk/!svn/ver/9791/source/trunk/templates/clkclk/extensions/magick/magick/functions/drawing.rb
+END

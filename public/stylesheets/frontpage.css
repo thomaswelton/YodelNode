@@ -1,0 +1,214 @@
+/*
+	Mixin used to create a css 3 rounded corner box with css 2 image fall back.
+*/
+/* line 17, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 5, ../sass/frontpage.scss */
+html {
+  height: 100%;
+  margin: 0;
+  background: white;
+  color: #333;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 12, ../sass/frontpage.scss */
+body {
+  width: 950px;
+  margin: 0 auto;
+  overflow: hidden;
+  *zoom: 1;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
+}
+
+/* line 19, ../sass/frontpage.scss */
+.cross {
+  color: #ffffff;
+  font-size: 100px;
+  line-height: 65px;
+  text-align: right;
+}
+
+/* line 26, ../sass/frontpage.scss */
+h1, h2 {
+  color: #ffffff;
+}
+
+/* line 30, ../sass/frontpage.scss */
+.highlight {
+  color: #ec2327;
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* line 38, ../sass/frontpage.scss */
+#yodelWrapper {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  float: none;
+  background: url('../images/bg.jpg?1320081955');
+  width: 901px;
+  height: 569px;
+  margin: auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -466px;
+  top: 50%;
+  margin-top: -291px;
+  padding: 7px 16px;
+  border: 1px solid #CCC;
+  -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 25px 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 25px 5px;
+  -o-box-shadow: rgba(0, 0, 0, 0.4) 0 0 25px 5px;
+  box-shadow: rgba(0, 0, 0, 0.4) 0 0 25px 5px;
+}
+/* line 147, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #yodelWrapper {
+  overflow-x: hidden;
+}
+/* line 55, ../sass/frontpage.scss */
+#yodelWrapper #flag {
+  background: url('../images/flag.gif?1320081476');
+  width: 36px;
+  height: 22px;
+  position: absolute;
+  left: 666px;
+  top: 25px;
+}
+/* line 64, ../sass/frontpage.scss */
+#yodelWrapper #header {
+  background-color: #ec2327;
+  width: 98px;
+  height: 98px;
+  padding: 10px;
+  color: #ffffff;
+  position: relative;
+}
+/* line 72, ../sass/frontpage.scss */
+#yodelWrapper #header .cross {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+/* line 78, ../sass/frontpage.scss */
+#yodelWrapper h1, #yodelWrapper h2 {
+  font-size: 12px;
+}
+/* line 82, ../sass/frontpage.scss */
+#yodelWrapper p.description {
+  width: 380px;
+  color: #ffffff;
+  padding: 10px 0;
+  font-size: 12px;
+  line-height: 20px;
+}
+/* line 90, ../sass/frontpage.scss */
+#yodelWrapper #hiker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: url('../images/hiker.png?1319798412');
+  width: 38px;
+  height: 60px;
+  z-index: 10;
+}
+/* line 99, ../sass/frontpage.scss */
+#yodelWrapper #hiker.left {
+  -moz-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+/* line 106, ../sass/frontpage.scss */
+#markerContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 25px;
+  list-style: disc;
+  list-style-position: inside;
+}
+/* line 113, ../sass/frontpage.scss */
+#markerContainer .marker {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 8px;
+  height: 9px;
+  line-height: 7px;
+  color: red;
+}
+/* line 121, ../sass/frontpage.scss */
+#markerContainer .marker.active {
+  color: white;
+}
