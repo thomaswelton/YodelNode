@@ -4,6 +4,7 @@
 
 var express = require('express')
   , routes = require('./routes')
+  , config = require('./config.js');
 
 var app = module.exports = express.createServer()
 	, io = require('socket.io').listen(app);
@@ -46,7 +47,7 @@ io.sockets.on('connection', function (socket) {
 //Start twitter streaming
 
 var twitterStream = require('./modules/twitter.js').twitterStream;
-var twitter = new twitterStream({user: "user", password: "password"});
+var twitter = new twitterStream({user: config.twitter.username, password: config.twitter.password});
 
 twitter.track('#HardestThingToDo');
 twitter.addListener('tweet',function(tweet){
