@@ -7,8 +7,7 @@ socket.on('tweet', function (tweet) {
 });
 socket.on('tweetCount', function (count) {
 	window.addEvent('domready',function(){
-		$$('.tweetCount').set('html',count);
-		moveHiker(count);
+		updateTweetCount(count);
 	});
 });
 socket.on('prizeCount', function (count) {
@@ -66,15 +65,19 @@ function plotMarkers(){
 	});
 }
 
-function moveHiker(count){
-	count = Math.floor(Math.min((count / 150),( window.yodelPositions.length - 2)));
-	if(count < ( window.yodelPositions.length - 2)){
-		//check which way the hiker is facing
-		if(getX(count) > getX(count +1)){
-			$('hiker').addClass('left');
-		}else{
-			$('hiker').removeClass('left');	
-		}
+function updateTweetCount(count){
+	if($('dev') !== null && $('devtoggle').checked === true){
+		count = $('devslider').value.toInt();
+	}
+	
+	$$('.tweetCount').set('html',count);
+	
+	count = Math.floor(Math.min((count / 150),( window.yodelPositions.length - 1)));
+	//check which way the hiker is facing
+	if(getX(count) >= getX(count +1)){
+		$('hiker').addClass('left');
+	}else{
+		$('hiker').removeClass('left');	
 	}
 	
 	$$('.marker.active').removeClass('active');
@@ -84,8 +87,27 @@ function moveHiker(count){
 	$('hiker').setStyle('bottom',getY(count) + 10);
 }
 
+function getImage(url) {        
+    var image = document.createElement('img'); // new Image(1, 1); 
+	var regexp = '/\{([^}]+)\}/';
+    image.src = url;
+    image.onload = function() {
+		plotMarkers();
+		var count = $$('.tweetCount')[0].innerHTML.toInt();
+		updateTweetCount(count);
+	};
+}
+
 window.addEvent('domready',function(){
-	plotMarkers();
-	var count = $$('.tweetCount')[0].innerHTML.toInt();
-	moveHiker(count);
+	//Make sure the bg image loads before plotting dots and moving the hiker
+	var preloadUrl = $('yodelWrapper').getStyle('background-image').slice(4,-1);
+	getImage(preloadUrl);
+	
+	if($('dev') !== null){
+		$('devslider').setAttribute('max',(window.yodelPositions.length + 1) * 150);
+		$('devslider').addEvent('change',function(){
+			$('devtoggle').checked = true;
+			updateTweetCount();
+		});
+	}
 });

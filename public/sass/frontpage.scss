@@ -16,6 +16,34 @@ body{
 	overflow:visible;
 }
 
+#dev{
+	position:absolute;
+	top:20px; left:20px;
+	
+	form{
+		@include column-base;
+		width:500px;
+		background:#ccc;
+		
+		label{
+			@include column-base(omega);
+			clear:both;
+			margin:5px 0;
+			width:100px;
+			position:relative;
+			
+			input{
+				@include column-base(omega);
+				width:380px;
+				position:absolute;
+				top:0;
+				left:110px;
+			}
+		}
+	}
+
+}
+
 .cross{
 	color:#ffffff;
 	font-size:100px;

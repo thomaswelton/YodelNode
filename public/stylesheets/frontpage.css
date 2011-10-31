@@ -87,6 +87,53 @@ body {
 }
 
 /* line 19, ../sass/frontpage.scss */
+#dev {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+/* line 23, ../sass/frontpage.scss */
+#dev form {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 500px;
+  background: #ccc;
+}
+/* line 147, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #dev form {
+  overflow-x: hidden;
+}
+/* line 28, ../sass/frontpage.scss */
+#dev form label {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  clear: both;
+  margin: 5px 0;
+  width: 100px;
+  position: relative;
+}
+/* line 147, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #dev form label {
+  overflow-x: hidden;
+}
+/* line 35, ../sass/frontpage.scss */
+#dev form label input {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 380px;
+  position: absolute;
+  top: 0;
+  left: 110px;
+}
+/* line 147, ../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.11.5/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html #dev form label input {
+  overflow-x: hidden;
+}
+
+/* line 47, ../sass/frontpage.scss */
 .cross {
   color: #ffffff;
   font-size: 100px;
@@ -94,12 +141,12 @@ body {
   text-align: right;
 }
 
-/* line 26, ../sass/frontpage.scss */
+/* line 54, ../sass/frontpage.scss */
 h1, h2 {
   color: #ffffff;
 }
 
-/* line 30, ../sass/frontpage.scss */
+/* line 58, ../sass/frontpage.scss */
 .highlight {
   color: #ec2327;
   font-size: 40px;
@@ -108,13 +155,13 @@ h1, h2 {
   display: block;
 }
 
-/* line 38, ../sass/frontpage.scss */
+/* line 66, ../sass/frontpage.scss */
 #yodelWrapper {
   display: inline;
   float: left;
   margin-right: 0;
   float: none;
-  background: url('../images/bg.jpg?1320081955');
+  background: url('../images/bg.jpg?1320094402');
   width: 901px;
   height: 569px;
   margin: auto;
@@ -134,16 +181,16 @@ h1, h2 {
 * html #yodelWrapper {
   overflow-x: hidden;
 }
-/* line 55, ../sass/frontpage.scss */
+/* line 83, ../sass/frontpage.scss */
 #yodelWrapper #flag {
-  background: url('../images/flag.gif?1320081476');
+  background: url('../images/flag.gif?1320094402');
   width: 36px;
   height: 22px;
   position: absolute;
   left: 666px;
   top: 25px;
 }
-/* line 64, ../sass/frontpage.scss */
+/* line 92, ../sass/frontpage.scss */
 #yodelWrapper #header {
   background-color: #ec2327;
   width: 98px;
@@ -152,17 +199,17 @@ h1, h2 {
   color: #ffffff;
   position: relative;
 }
-/* line 72, ../sass/frontpage.scss */
+/* line 100, ../sass/frontpage.scss */
 #yodelWrapper #header .cross {
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
-/* line 78, ../sass/frontpage.scss */
+/* line 106, ../sass/frontpage.scss */
 #yodelWrapper h1, #yodelWrapper h2 {
   font-size: 12px;
 }
-/* line 82, ../sass/frontpage.scss */
+/* line 110, ../sass/frontpage.scss */
 #yodelWrapper p.description {
   width: 380px;
   color: #ffffff;
@@ -170,17 +217,17 @@ h1, h2 {
   font-size: 12px;
   line-height: 20px;
 }
-/* line 90, ../sass/frontpage.scss */
+/* line 118, ../sass/frontpage.scss */
 #yodelWrapper #hiker {
   position: absolute;
   bottom: 0;
   left: 0;
-  background: url('../images/hiker.png?1319798412');
+  background: url('../images/hiker.png?1320094402');
   width: 38px;
   height: 60px;
   z-index: 10;
 }
-/* line 99, ../sass/frontpage.scss */
+/* line 127, ../sass/frontpage.scss */
 #yodelWrapper #hiker.left {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -189,7 +236,7 @@ h1, h2 {
   transform: scaleX(-1);
 }
 
-/* line 106, ../sass/frontpage.scss */
+/* line 134, ../sass/frontpage.scss */
 #markerContainer {
   position: absolute;
   bottom: 0;
@@ -198,7 +245,7 @@ h1, h2 {
   list-style: disc;
   list-style-position: inside;
 }
-/* line 113, ../sass/frontpage.scss */
+/* line 141, ../sass/frontpage.scss */
 #markerContainer .marker {
   position: absolute;
   left: 0;
@@ -208,7 +255,7 @@ h1, h2 {
   line-height: 7px;
   color: red;
 }
-/* line 121, ../sass/frontpage.scss */
+/* line 149, ../sass/frontpage.scss */
 #markerContainer .marker.active {
   color: white;
 }

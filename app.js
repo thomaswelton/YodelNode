@@ -23,14 +23,18 @@ app.configure(function(){
   app.use(express.compiler({ src: __dirname + '/public', enable: ['sass'] }));
   app.use(app.router);
   app.use(express.static(__dirname + '/public'));
+
+  app.development = false;
+
 });
 
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true })); 
+  app.development = true;
 });
 
 app.configure('production', function(){
-  app.use(express.errorHandler()); 
+  app.use(express.errorHandler());
 });
 
 // Routes
