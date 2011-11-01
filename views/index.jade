@@ -1,6 +1,7 @@
 #yodelWrapper
+	#flag
 	#header
-		h1 hashTagHere
+		h1 #YodelAyEEEOoo
 		div.cross &#10010;
 		
 	p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iacul is libero eget lacus ultricies posuere. Quisque aliquet mauris nec velit suscipit luctus. Ut nec sollicitudin neque. Nulla vel ultricies purus.
@@ -10,8 +11,29 @@
 	h2 Prizes Given
 	span.highlight.prizeCount= prizeCount
 	
-	#hiker
-	#flag
+	#hikerContainer
+		img(src="images/hiker.png", height="60",id="hiker")
+		#tweetContainer.top.right
+			#tweetBubble
+				p!= tweet.text
+			#tweetUser
+				img(src=tweet.user.profile_image_url_https, width=25, height=25)
+				#tweetUserInfo!= (typeof(tweet.user.name) !== 'undefined') ? tweet.user.name : tweet.user.screen_name;
+					!= ' '
+					- var tweetTime = new Date(tweet.created_at).getTime();
+					- var time 		= new Date().getTime();
+					- var diff		= (time - tweetTime) / 1000
+					- var hours 	= Math.floor(diff / (60 * 60));
+					- var mins		= Math.floor(diff / (60));
+					- var secs		= Math.floor(diff);
+					if(hours  > 0)
+						!= '(' + hours + ' hours ago' + ')';
+					else if(mins > 0)
+						!= '(' + mins + ' mins ago' + ')';
+					else if(secs > 0)
+						!= '(' + secs + ' seconds ago' + ')';
+					else
+						!= '(just now)';
 
 if development === true
 	#dev!= partial('dev')

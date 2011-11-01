@@ -21,7 +21,9 @@ var twitterStream = exports.twitterStream = function(options) {
 	this.tweetCount		= 0;
 	
 	this.twitter.addListener('tweet', function(tweet){
-		self.redisClient.lpush(self.tweetList,tweet,function(err,len){
+		//Store tweet to redis as a JSON string
+		var JSONtweet = JSON.stringify(tweet);
+		self.redisClient.lpush(self.tweetList,JSONtweet,function(err,len){
 			self.twitter.emit('tweetCount', len);
 			if(self.prizeLevels.indexOf(len) > -1){
 				self.awardPrize(tweet,len);
@@ -52,7 +54,8 @@ twitterStream.prototype = Object.create(EventEmitter.prototype);
 
 twitterStream.prototype.awardPrize = function (tweet,index){
 	var self = this;
-	this.redisClient.lpush(this.prizeList,tweet,function(err,len){
+	var JSONtweet = JSON.stringify(tweet);
+	this.redisClient.lpush(this.prizeList,JSONtweet,function(err,len){
 		self.twitter.emit('prizeCount', len);
 	});
 }

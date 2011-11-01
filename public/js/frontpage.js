@@ -65,6 +65,26 @@ function plotMarkers(){
 	});
 }
 
+function moveInView(el,container){
+	if(el.getPosition(container).y.toInt() < 60){
+		el.removeClass('top');
+		el.addClass('bottom');		
+	}else if( (el.getPosition(container).y.toInt() - (el.getSize().y + $('hiker').getAttribute('height').toInt() + 100)) > 0){
+		el.removeClass('bottom');	
+		el.addClass('top');	
+	}
+	
+	if( (el.getCoordinates().right + 30) > container.getCoordinates().right){
+		console.log('move to the left');
+		el.removeClass('right');	
+		el.addClass('left');	
+	}else if( (el.getCoordinates().right + el.getSize().x + $('hiker').getStyle('width').toInt() + 30) < container.getCoordinates().right){
+		console.log('move to the right');
+		el.removeClass('left');	
+		el.addClass('right');	
+	}
+}
+
 function updateTweetCount(count){
 	if($('dev') !== null && $('devtoggle').checked === true){
 		count = $('devslider').value.toInt();
@@ -75,16 +95,29 @@ function updateTweetCount(count){
 	count = Math.floor(Math.min((count / 150),( window.yodelPositions.length - 1)));
 	//check which way the hiker is facing
 	if(getX(count) >= getX(count +1)){
-		$('hiker').addClass('left');
+		$('hikerContainer').addClass('left');
 	}else{
-		$('hiker').removeClass('left');	
+		$('hikerContainer').removeClass('left');	
 	}
+	
+	//Change the height of the hiker so it scales up the mountain
+	var maxHeight = 60;
+	var minHeight = 30;
+	
+	var rangeY = window.yodelPositions[window.yodelPositions.length - 1].y - window.yodelPositions[0].y;
+	var currentY = getY(count);
+	var height = maxHeight - Math.round(( (currentY / rangeY) * (maxHeight - minHeight)  ));
+	
+	$('hiker').setAttribute('height',height);
+	
 	
 	$$('.marker.active').removeClass('active');
 	$$('.marker')[count].addClass('active');
 	
-	$('hiker').setStyle('left',getX(count) - 19);
-	$('hiker').setStyle('bottom',getY(count) + 10);
+	$('hikerContainer').setStyle('left',getX(count) - 19);
+	$('hikerContainer').setStyle('bottom',getY(count) + 10);
+	
+	moveInView($('tweetContainer'),$('yodelWrapper'));
 }
 
 function getImage(url) {        
@@ -92,9 +125,6 @@ function getImage(url) {
 	var regexp = '/\{([^}]+)\}/';
     image.src = url;
     image.onload = function() {
-		plotMarkers();
-		var count = $$('.tweetCount')[0].innerHTML.toInt();
-		updateTweetCount(count);
 	};
 }
 
@@ -102,6 +132,10 @@ window.addEvent('domready',function(){
 	//Make sure the bg image loads before plotting dots and moving the hiker
 	var preloadUrl = $('yodelWrapper').getStyle('background-image').slice(4,-1);
 	getImage(preloadUrl);
+	
+	plotMarkers();
+	var count = $$('.tweetCount')[0].innerHTML.toInt();
+	updateTweetCount(count);
 	
 	if($('dev') !== null){
 		$('devslider').setAttribute('max',(window.yodelPositions.length + 1) * 150);

@@ -24,9 +24,15 @@ exports.index = function(req, res){
 		development: function(callback){
 			var query = url.parse(req.url,true).query;
 			callback(null, (typeof(query.dev)!== 'undefined' && query.dev == 1));
+		},
+		tweet: function(callback){
+			redisClient.lindex("yodel-tweet-list",0,function(err, obj) {
+				callback(null, JSON.parse(obj));
+			});		
 		}
 	},
 	function(err, results) {
-		res.render('index', {'title': "Swiss Yodel", 'tweetCount': results.tweetCount, 'prizeCount': results.prizeCount,'development': results.development });
+		console.log(results.tweet);
+		res.render('index', {'title': "Swiss Yodel", 'tweetCount': results.tweetCount, 'prizeCount': results.prizeCount,'development': results.development, 'tweet': results.tweet });
 	});
 };
