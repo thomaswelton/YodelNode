@@ -68,31 +68,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 /* line 5, ../sass/frontpage.scss */
 html {
-  height: 100%;
   margin: 0;
   background: white;
   color: #333;
   font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 12, ../sass/frontpage.scss */
+/* line 11, ../sass/frontpage.scss */
 body {
   width: 950px;
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
-  height: 100%;
-  width: 100%;
   overflow: visible;
 }
 
-/* line 19, ../sass/frontpage.scss */
+/* line 16, ../sass/frontpage.scss */
 #dev {
   position: absolute;
   top: 20px;
   left: 20px;
 }
-/* line 23, ../sass/frontpage.scss */
+/* line 20, ../sass/frontpage.scss */
 #dev form {
   display: inline;
   float: left;
@@ -104,7 +101,7 @@ body {
 * html #dev form {
   overflow-x: hidden;
 }
-/* line 28, ../sass/frontpage.scss */
+/* line 25, ../sass/frontpage.scss */
 #dev form label {
   display: inline;
   float: left;
@@ -118,7 +115,7 @@ body {
 * html #dev form label {
   overflow-x: hidden;
 }
-/* line 35, ../sass/frontpage.scss */
+/* line 32, ../sass/frontpage.scss */
 #dev form label input {
   display: inline;
   float: left;
@@ -133,7 +130,7 @@ body {
   overflow-x: hidden;
 }
 
-/* line 47, ../sass/frontpage.scss */
+/* line 44, ../sass/frontpage.scss */
 .cross {
   color: #ffffff;
   font-size: 100px;
@@ -141,12 +138,12 @@ body {
   text-align: right;
 }
 
-/* line 54, ../sass/frontpage.scss */
+/* line 51, ../sass/frontpage.scss */
 h1, h2 {
   color: #ffffff;
 }
 
-/* line 58, ../sass/frontpage.scss */
+/* line 55, ../sass/frontpage.scss */
 .highlight {
   color: #ec2327;
   font-size: 40px;
@@ -155,22 +152,17 @@ h1, h2 {
   display: block;
 }
 
-/* line 66, ../sass/frontpage.scss */
+/* line 63, ../sass/frontpage.scss */
 #yodelWrapper {
   display: inline;
   float: left;
   margin-right: 0;
-  float: none;
-  background: url('../images/bg.jpg?1320081955');
+  display: block;
+  background: url('../images/bg.jpg?1320094402');
   width: 901px;
   height: 569px;
-  margin: auto;
-  position: absolute;
-  left: 50%;
-  margin-left: -466px;
-  top: 50%;
-  margin-top: -291px;
-  padding: 7px 16px;
+  margin: 5px auto;
+  position: relative;
   border: 1px solid #CCC;
   -moz-box-shadow: rgba(0, 0, 0, 0.4) 0 0 25px 5px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 0 25px 5px;
@@ -181,16 +173,16 @@ h1, h2 {
 * html #yodelWrapper {
   overflow-x: hidden;
 }
-/* line 83, ../sass/frontpage.scss */
+/* line 76, ../sass/frontpage.scss */
 #yodelWrapper #flag {
-  background: url('../images/flag.gif?1320081476');
+  background: url('../images/flag.gif?1320094402');
   width: 36px;
   height: 22px;
   position: absolute;
   left: 666px;
   top: 25px;
 }
-/* line 92, ../sass/frontpage.scss */
+/* line 85, ../sass/frontpage.scss */
 #yodelWrapper #header {
   background-color: #ec2327;
   width: 98px;
@@ -199,17 +191,17 @@ h1, h2 {
   color: #ffffff;
   position: relative;
 }
-/* line 100, ../sass/frontpage.scss */
+/* line 93, ../sass/frontpage.scss */
 #yodelWrapper #header .cross {
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
-/* line 106, ../sass/frontpage.scss */
+/* line 99, ../sass/frontpage.scss */
 #yodelWrapper h1, #yodelWrapper h2 {
   font-size: 12px;
 }
-/* line 110, ../sass/frontpage.scss */
+/* line 103, ../sass/frontpage.scss */
 #yodelWrapper p.description {
   width: 380px;
   color: #ffffff;
@@ -217,7 +209,7 @@ h1, h2 {
   font-size: 12px;
   line-height: 20px;
 }
-/* line 118, ../sass/frontpage.scss */
+/* line 111, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer {
   position: absolute;
   bottom: 0;
@@ -226,14 +218,14 @@ h1, h2 {
   height: 60px;
   z-index: 10;
 }
-/* line 126, ../sass/frontpage.scss */
+/* line 119, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #hiker {
   position: absolute;
   bottom: -10px;
   left: -15px;
   z-index: 100;
 }
-/* line 133, ../sass/frontpage.scss */
+/* line 126, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer.left #hiker {
   -moz-transform: scaleX(-1);
   -webkit-transform: scaleX(-1);
@@ -242,7 +234,7 @@ h1, h2 {
   transform: scaleX(-1);
   left: 30px;
 }
-/* line 139, ../sass/frontpage.scss */
+/* line 132, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer {
   display: inline;
   float: left;
@@ -258,23 +250,23 @@ h1, h2 {
 * html #yodelWrapper #hikerContainer #tweetContainer {
   overflow-x: hidden;
 }
-/* line 148, ../sass/frontpage.scss */
+/* line 141, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer.top {
   bottom: 100%;
 }
-/* line 151, ../sass/frontpage.scss */
+/* line 144, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer.bottom {
   top: 100%;
 }
-/* line 154, ../sass/frontpage.scss */
+/* line 147, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer.right {
   left: 25px;
 }
-/* line 157, ../sass/frontpage.scss */
+/* line 150, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer.left {
   right: 25px;
 }
-/* line 161, ../sass/frontpage.scss */
+/* line 154, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer #tweetBubble {
   padding: 10px;
   width: 190px;
@@ -292,12 +284,12 @@ h1, h2 {
   border-radius: 3px;
   position: relative;
 }
-/* line 169, ../sass/frontpage.scss */
+/* line 162, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer #tweetBubble p {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 12px;
 }
-/* line 174, ../sass/frontpage.scss */
+/* line 167, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer #tweetUser {
   display: inline;
   float: left;
@@ -308,7 +300,7 @@ h1, h2 {
 * html #yodelWrapper #hikerContainer #tweetContainer #tweetUser {
   overflow-x: hidden;
 }
-/* line 178, ../sass/frontpage.scss */
+/* line 171, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer #tweetUser img {
   display: inline;
   float: left;
@@ -325,7 +317,7 @@ h1, h2 {
 * html #yodelWrapper #hikerContainer #tweetContainer #tweetUser img {
   overflow-x: hidden;
 }
-/* line 185, ../sass/frontpage.scss */
+/* line 178, ../sass/frontpage.scss */
 #yodelWrapper #hikerContainer #tweetContainer #tweetUser #tweetUserInfo {
   display: inline;
   float: left;
@@ -340,7 +332,7 @@ h1, h2 {
   overflow-x: hidden;
 }
 
-/* line 199, ../sass/frontpage.scss */
+/* line 192, ../sass/frontpage.scss */
 #markerContainer {
   position: absolute;
   bottom: 0;
@@ -349,7 +341,7 @@ h1, h2 {
   list-style: disc;
   list-style-position: inside;
 }
-/* line 206, ../sass/frontpage.scss */
+/* line 199, ../sass/frontpage.scss */
 #markerContainer .marker {
   position: absolute;
   left: 0;
@@ -359,7 +351,15 @@ h1, h2 {
   line-height: 7px;
   color: red;
 }
-/* line 214, ../sass/frontpage.scss */
-#markerContainer .marker.active {
+/* line 208, ../sass/frontpage.scss */
+#markerContainer .active {
   color: white;
+}
+/* line 211, ../sass/frontpage.scss */
+#markerContainer .mousemarker {
+  color: green;
+}
+/* line 214, ../sass/frontpage.scss */
+#markerContainer .newmarker {
+  color: yellow;
 }

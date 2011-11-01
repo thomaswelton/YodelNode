@@ -3,7 +3,6 @@
 $red: #ec2327;
 
 html{
-	height:100%;
 	margin:0;
 	background:white;
 	color:#333;
@@ -11,8 +10,6 @@ html{
 }
 body{
 	@include container;
-	height: 100%;
-	width:100%;
 	overflow:visible;
 }
 
@@ -65,17 +62,13 @@ h1,h2{
 
 #yodelWrapper{
 	@include column-base(omega);
-	float:none;
+	display:block;
 	background:image-url('bg.jpg');
 	width:image-width('bg.jpg') - (2 * 16px);
 	height:image-height('bg.jpg') - (2 * 7px);
-	margin:auto;
-	position:absolute;
-	left:50%;
-	margin-left: -1 * floor(image-width('bg.jpg')/2);
-	top:50%;
-	margin-top: -1 * floor(image-height('bg.jpg')/2);
-	padding:7px 16px;
+	margin:5px auto;
+	position:relative;
+	//padding:7px 16px;
 	
 	border: 1px solid #CCC;
 	@include box-shadow(rgba(0,0,0,0.4) 0 0 25px 5px);
@@ -211,8 +204,14 @@ h1,h2{
 		line-height:7px;
 		color:red;
 		
-		&.active{
-			color:white;
-		}
+	}
+	.active{
+		color:white;
+	}
+	.mousemarker{
+		color:green;
+	}
+	.newmarker{
+		color:yellow;
 	}
 }
